@@ -1,0 +1,30 @@
+/* this CSS style the gallery.html page linked from the Destinations section of the index.html page */
+
+.gallery {
+    background-color: lightcyan;
+  
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+  
+    margin: auto;
+}
+  
+/* this div includes image and paragraph */
+.gallery div {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+ 
+/* this needs to be played with.  */
+.gallery img {
+    max-height: 450px;
+    margin: 0.5em;
+
+    max-width: 90%;
+}
+

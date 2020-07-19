@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelExperts Destinations</title>
+	
+	<%- include('./partials/css-global'); %>
+	<!-- gallery specific css stylesheet -->
+	<link rel="stylesheet" href="css/gallery.css">
+	
+</head>
+<body>
+    <!-- Header & Navbar-->
+    <header>
+		<div class="logo"> 
+			<a href="/index"><img class="frog" src="images/frog-solid.svg" alt="Travel Experts Frog logo"></a>
+			<h1><a href="/index">Travel Experts</a></h1>
+		</div>
+		<nav>
+			<button class="toggle-btn">
+				<img class="toggle-svg" src="images/bars-solid.svg" alt="hamburger menu or 3 solid bars">	
+			</button>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/index#destinations">Destinations</a></li>
+				<li><a href="/index#contact-us">Contact Us</a></li>
+				<li><a href="/login">Login</a></li>
+				<li><a href="/register">Sign-Up</a></li>
+			</ul>
+		</nav>
+	</header>
+    
+  <!-- Destinations Gallery-->
+  <div class="gallery">
+    <!-- The gallery will go here. See gallery.js to see how that happens. -->
+  </div>
+    
+  <!-- Footer -->
+	<%- include('./partials/footer'); %>
+    
+  <!-- JS to toggle hamburger menu -->
+	<%- include('./partials/js-toggle'); %> 
+  <!-- JS with array of image information (object) and gallery display -->
+	<%- include('./partials/js-browser'); %> 
+  
+	
+</body>
+</html>

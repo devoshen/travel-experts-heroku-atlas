@@ -1,0 +1,207 @@
+/******************/
+/* Header Section */
+/******************/
+.frog {
+  width: 40px;
+  padding-right: 2px;
+}
+
+/* Grouping frog logo and 'Travel Experts' together to create logo */
+/* padding added from assignment 1 comment */
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5em 0.5em;
+}
+
+/* header mainly contains logo and navbar */
+header{
+  padding-left:10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+    
+  background-color:mediumseagreen;
+ }
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+
+header h1 a {
+  text-decoration: none;
+  color:white;
+  margin: 0;
+}
+
+/*********************************/
+/* HERO Section - Attention Grab */
+/*********************************/
+.hero {
+  /* to fix h2 and p in this section to the upper-right of this section */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  background-color: cadetblue;
+  background-image: url('https://picsum.photos/id/1040/500/500');
+  background-size: cover;
+  background-position: center;
+    
+  /* height: 80vh; */
+  min-height:80vh;
+  /* Can't really tell the difference using height vs min-height */
+}
+
+.hero h2 {
+  /* created more space between lines for readability, need to device check on phone */
+  font-size: 2.5rem;
+  color: darkgreen;
+  margin: 0;
+  padding: 1em 2em;
+}
+
+.hero p {
+  font-size: 2rem;
+  color: darkslategrey;
+  margin: 0;
+  padding: 0em 2em;
+}
+
+/************************/
+/* Destinations Section */
+/************************/
+.destinations {
+  background-color: lightcyan;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: auto;
+}
+
+.destinations h2 {
+  margin: 0;
+}
+
+.jsDest img {
+  width: 700px;
+  /* min-width: 400px;
+  max-width: 800px; */
+  margin: 0.5em;
+}
+
+.jsDest div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/**********************/
+/* Contact-Us Section */
+/**********************/
+/* consider testing and using flex-box for this section */
+.contact-us {
+  background-color: azure;
+  /* text stretches to max-width defined in 'p' */
+  text-align: justify;
+  margin: 0;
+  padding: 3em;
+}
+
+.contact-us h2 {
+  text-align: center; 
+  margin: 0;
+}
+
+.contact-us ul {
+  list-style-type: none;
+  padding-left: 0;
+
+  max-width: 60ch;
+  
+  padding: 0 1em;
+  margin: 1em auto;
+}
+
+.contact-us p {
+  /* line length(web): aim for 75 or less */ 
+  max-width: 60ch;
+
+  padding: 0 1em;
+  margin: 1em auto;
+}
+
+.contact-us form {
+  background-image: linear-gradient(cornflowerblue, cadetblue);
+
+  width: 50%;
+  min-width: 280px;
+  max-width: 550px;
+    
+  padding: 0.5em;
+  border: 2px solid grey;
+  border-radius: 1em;
+  
+  margin: 0 auto;
+}
+
+.contact-us form div {
+  margin-top: 0.5em;
+}
+
+.contact-us form label {
+  /* Uniform size & alignment */
+  /* consider playing with this width */
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+
+.contact-us form input, .contact-us form textarea {
+  /* Unify text field font setting */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 2px solid grey;
+}
+
+.contact-us form button {
+  font-size: 1rem;
+  margin-left: 50%;
+  margin-top: 0.5em;
+  background-color: azure;
+}
+
+/* form validation styles */
+input:invalid {
+  border: 2px dashed pink;
+}
+  
+input:valid {
+  border: 2px solid black;
+}
+
+/******************/
+/* Footer Section */
+/******************/
+/* consider testing and using flex-box for this section */
+footer {
+  color:white;
+  background-color: mediumseagreen;
+  margin: 0;
+}
+
+footer p {
+  margin: 0;
+}

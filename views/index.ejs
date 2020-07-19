@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TravelExperts Homepage</title>
+	
+	<%- include('./partials/css-global'); %>
+	
+</head>
+<body>
+	<!-- Header & Navbar-->
+	<header>
+		<div class="logo"> 
+			<a href="/index"><img class="frog" src="images/frog-solid.svg" alt="Travel Experts Frog logo"></a>
+			<h1><a href="/index">Travel Experts</a></h1>
+		</div>
+		<nav>
+			<button class="toggle-btn">
+				<img class="toggle-svg" src="images/bars-solid.svg" alt="hamburger menu or 3 solid bars">	
+			</button>
+			<div class="navbar">
+				<ul>
+					<li><a href="/index">Home</a></li>
+					<li><a href="/index#destinations">Destinations</a></li>
+					<li><a href="/index#contact-us">Contact Us</a></li>
+					<li><a href="/login">Login</a></li>
+					<li><a href="/register">Sign-Up</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<!-- HERO Section  -->
+	<div class="hero">
+		<h2>Traval Tips from the Travel Experts</h2>
+		<p>Sign Up Now for Exlusive Deals!</p>
+	</div>
+	
+	<!-- Destinations -->
+	<div class="destinations">
+		<h2 id="destinations">DESTINATIONS</h2>
+		<!-- IDs are usually reserved for js. Used here for navbar document fragment links	 -->
+		<p>Click on each picture below to view all our themed destinations</p>
+		<div class="jsDest">
+		<!-- The gallery will go here. See external JS script: destinations.js to see how this happens. -->
+		
+		</div>
+	</div>
+
+	<!-- Contact Us  -->
+	<div class="contact-us">
+		<h2 id="contact-us">CONTACT US</h2> 
+		<!-- IDs are usually reserved for js. Used here for navbar document fragment links	 -->
+		<!-- List -->
+		<ul>
+			<li><strong>Office:</strong> 403-123-4567</li>
+			<li><strong>Email:</strong> info.travelexperts@edu.sait.ca</li>
+			<li><strong>Hours:</strong> 8:00AM-5:00PM Monday-Friday</li>
+			<li><strong>Address:</strong> 9 Some Ave SE, Calgary, AB, Canada T2P 0B4</li>
+		</ul>
+				
+		<!-- Paragraph -->
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eum soluta harum laboriosam aspernatur iusto. Deleniti officiis nam laborum, ratione, corrupti maxime fugit cumque distinctio, ducimus adipisci corporis esse perferendis!</p>
+	
+		<!-- Forms -->
+		<form action="https://formspree.io/moqkkknb" method="POST">
+			<fieldset>
+				<legend>Send Us a Message</legend>
+				<div>
+					<label>Full Name</label>
+					<input type="text" name="fullName" required>
+				</div>
+				<div>
+					<label>Email</label>
+					<input type="email" name="email" placeholder="first.last@edu.sait.ca" required>
+				</div>
+				<div>
+					<label>Message</label>
+					<textarea name="message" maxlength="140" rows="5" required></textarea>
+				</div>
+				<button type="submit"><strong>Submit</strong></button>
+			</fieldset>
+		</form>	
+	</div>
+		
+	<!-- Footer -->
+	<%- include('./partials/footer'); %>
+
+	<!-- JS to toggle hamburger menu -->
+	<%- include('./partials/js-toggle'); %> 
+	<!-- JS with array of image information (object)  -->
+
+	<!-- JS with destination looping gallery  -->
+	<script src="js/destinations.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* body contains header, main, and footer */
+body {
+  display: flex;
+  flex-direction: column;
+  /* to push footer to bottom of screen to create a 'sticky footer' */
+  min-height: 100vh;
+}
+
+/* register is a class for main (h2 and form) */
+.register {
+  background-image: url('https://picsum.photos/id/124/500/500');
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* to 'stretch' background to the full screen */
+  flex: auto;
+}
+
+/* Form properties learned from MDN "Styling web forms" & "Your first forms" & "Client-side form validation" */
+.register-form {
+  background-image: linear-gradient(cornflowerblue, cadetblue);
+    
+  /* specify width in relation to screen and set min and max for sized screens in both extremes */
+  width: 50%;
+  min-width: 270px;
+  max-width: 450px;
+    
+  padding: 0.5em;
+  border: 2px solid grey;
+  border-radius: 1em;
+}
+
+.register-form label {
+  /* Uniform size & alignment */
+  /* consider playing with this width */
+  display: inline-block;
+  width: 150px;
+  text-align: left;
+}
+
+.register-form input {
+  /* Unify text field font setting */
+  font: 1em sans-serif;
+  
+  /* Uniform text field size */
+  width: 60%;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 2px solid grey;
+}
+
+.checkbox label {
+  width: 200px;
+  text-align: left;
+}
+
+.checkbox input {
+  width: 30px;
+}
+
+main form li button {
+  font-size: 18px;
+  margin-top: 0.5em;
+  margin-left: 100px;
+}
+
+/* form validation styles */
+input:invalid {
+    border: 2px dashed pink;
+}
+    
+  input:valid {
+    border: 2px solid black;
+}

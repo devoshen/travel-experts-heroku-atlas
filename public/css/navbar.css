@@ -1,0 +1,83 @@
+/* Navbar */
+/* The hamburger toggle menu is modified from in-class sample code */
+
+/* By default, hide menu on mobile (desktop is handled in the media query below) */
+nav ul {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;  
+}
+
+.toggle-btn {
+  background-color: mediumseagreen;
+  border: 0 solid;
+  margin-top: 5px;
+}
+
+.toggle-svg {
+  height: 40px;
+}
+
+/* this class is added or removed only when 'toggled' see toggle.js */
+.visible {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* positions navbar relative to the parent (header), so the hamburger menu drops down instead of thicken the header when clicked */
+.navbar {
+  position: absolute;
+  right: 0px;
+  top: 72px;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+
+  /* The items will fill any empty space. */
+  display: block;
+
+  background-image: linear-gradient(150deg, grey, black);
+  padding: 0.5em 1em;     
+}
+
+/* Apply these styles when the screen is in 'landscape' orientation */
+@media (orientation: landscape) {
+  
+  /* Don't show hamburger menu on desktop */
+  nav .toggle-btn {
+    display: none;
+  }
+    
+  nav ul {
+    /* Horizontal nav on desktop */
+    display: flex;
+    margin: 0;
+  }
+
+  /* returns navbar within the header once in landscape mode */
+  .navbar {
+    position: static;
+  }
+
+}
+
+/* mouse hover, active, and current page effects */
+  
+nav a:hover {
+  background-image: linear-gradient(black, grey);
+}
+    
+nav a:active {
+  background-image: linear-gradient(cornflowerblue, cadetblue);
+}
+  
+.current-page {
+  background-image: linear-gradient(Azure, black);
+}
+  
