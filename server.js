@@ -31,6 +31,13 @@ const app = express();
 // EJS still needs to be installed via NPM
 app.set('view engine', 'ejs');
 
+ // cors origin URL - Allow inbound traffic from origin
+ corsOptions = {
+  origin: "https://dashboard.heroku.com",
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+app.use(cors(corsOptions));
+
 // automatically check if requested file is found in /public
 // if yes, return that file as a response to the browser
 app.use(express.static(path.join(__dirname, 'public')));
