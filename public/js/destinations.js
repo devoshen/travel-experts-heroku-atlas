@@ -1,14 +1,14 @@
 // this JS creates a looping gallery that loops the destination images and description in the index.html destination section
 
-fetch('http://localhost:3000/api/travelGoals')
+fetch('http://localhost:3000/api/travelgoals')
   .then(function(response) {
     console.log(response);  
     return response.json();
   })
-  .then(function(travelGoals) {
+  .then(function(travelgoals) {
 
     // Define array
-    const imgInfoArray = travelGoals;
+    const imgInfoArray = travelgoals;
     // variable where we will store our img tags
     let imgTemplate = ''; 
     // flex container for images

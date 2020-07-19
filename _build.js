@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 
 // Import seed data
-const dbSeed = require('./seeds/travelGoals.js');
+const dbSeed = require('./seeds/travelgoals.js');
 
 // Define model
-const TravelGoal = require('./models/travelGoal.js');
+const Travelgoal = require('./models/travelgoal.js');
 
 /*******************************/
 /* Mongoose/MongoDB Connection */
@@ -25,7 +25,7 @@ db.on('error', function(error){
 
 db.once('open', function() {
   console.log('Connected to DB...');
-  TravelGoal.insertMany(dbSeed, function(error, travelGoal) {
+  Travelgoal.insertMany(dbSeed, function(error, travelgoal) {
     console.log('Data import completed.')
     mongoose.connection.close();
   });

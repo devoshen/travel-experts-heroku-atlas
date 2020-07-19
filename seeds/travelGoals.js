@@ -1,7 +1,7 @@
 // Array of objects - This is my node module
 // Any value you assign to `module.exports` (bottom of page) will be returned when you `require()` this module.
 
-const travelGoals =
+const travelgoals =
 [
     {
         id:           1043,
@@ -77,4 +77,4 @@ const travelGoals =
     }
 ];
 
-module.exports = travelGoals;
+module.exports = travelgoals;

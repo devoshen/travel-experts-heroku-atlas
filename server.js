@@ -2,13 +2,13 @@
 const path = require('path');
 const express = require('express');
 // Custom module paths start with './' -> current directory 
-// const travelGoals = require('./travelGoals');
+// const travelgoals = require('./travelgoals');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
 
 // Models
-const TravelGoal = require('./models/travelGoal.js');
+const Travelgoal = require('./models/travelgoal.js');
 
 // Hide creds from repo
 const mongoDB = process.env.MONGODB_URL;
@@ -77,33 +77,33 @@ app.get('/gallery-single', function(request, response){
   response.render('gallery-single');
 })
 
-// Define an endpoint handler for the individual travelGoal pages
+// Define an endpoint handler for the individual travelgoal pages
 // https://expressjs.com/en/api.html#req.params
 app.get('/:id', function(request, response){
 
   // model.findOne returns the first object it finds
   // model.find will always return an array, even if it only finds one 
-  TravelGoal.findOne({'id': request.params.id}, function(error, travelGoal) {
+  Travelgoal.findOne({'id': request.params.id}, function(error, travelgoal) {
   
   // Check for IDs that are not in our list
-  if (!travelGoal) {
+  if (!travelgoal) {
     return response.send('Invalid ID.');
   }
 
   // The above find() method returns the object that matches by ID
-  // Now pass the travelGoal object into our view (the 2nd object must be an object)
-  response.render('gallery-single',travelGoal);
+  // Now pass the travelgoal object into our view (the 2nd object must be an object)
+  response.render('gallery-single',travelgoal);
   });
 })
 
-// Create a JSON (no EJS here) that returns the entire travelGoal JSON
+// Create a JSON (no EJS here) that returns the entire travelgoal JSON
 // This is the endpoint that the frontend gallery script calls (see: ./public/js/browser.js).
-app.get('/api/travelGoals', function(request, response){
+app.get('/api/travelgoals', function(request, response){
   
-  // response.json(travelGoals);
+  // response.json(travelgoals);
 
-  TravelGoal.find(function(error, travelGoals) { 
-    response.json(travelGoals);
+  Travelgoal.find(function(error, travelgoals) { 
+    response.json(travelgoals);
   });
 
 })
