@@ -5,6 +5,7 @@ const express = require('express');
 // const travelGoals = require('./travelGoals');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
+const cors = required('cors');
 
 // Models
 const TravelGoal = require('./models/travelGoal.js');
