@@ -5,7 +5,7 @@ const express = require('express');
 // const travelGoals = require('./travelGoals');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
-const cors = required('cors');
+const cors = require('cors');
 
 // Models
 const TravelGoal = require('./models/travelGoal.js');
@@ -32,7 +32,7 @@ const app = express();
 // EJS still needs to be installed via NPM
 app.set('view engine', 'ejs');
 
- // cors origin URL - Allow inbound traffic from origin
+// cors origin URL - Allow inbound traffic from origin
  corsOptions = {
   origin: "https://dashboard.heroku.com",
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
