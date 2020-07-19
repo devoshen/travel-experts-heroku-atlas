@@ -10,7 +10,7 @@
 // But let's use our own JSON API:
 // Since the execution of this `app.js` script will be long finished by the time the following `fetch()` call returns data, we need to put our loop inside the second .then(). Check out this CSS Tricks article for the details about what's going on here. 
 // https://css-tricks.com/using-fetch/
-fetch('http://localhost:3000/api/travelGoals')
+fetch('http://travel-experts-ss.herokuapp.com/api/travelGoals')
   .then(function(response) {
     console.log(response);  
     return response.json();
